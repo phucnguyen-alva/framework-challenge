@@ -16,30 +16,41 @@ body, html {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
     text-align: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Make the navbar a flex container */
+    justify-content: center; /* Center the content horizontally */
     align-items: center;
 }
+
 .navbar-custom .navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    display: flex; /* Ensure nav items are displayed in a horizontal row */
+    flex-direction: row; /* This guarantees that the items are aligned in a row */
+    align-items: center; /* Align items vertically centered within the nav */
+    list-style: none; /* Remove the default bullet points */
+    padding: 0;
+    margin: 0;
 }
+
+.navbar-custom .nav-item {
+    margin: 0 1rem; /* Add space between nav items */
+}
+
 .navbar-custom .nav-link {
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: 2px solid #ff0000;
     border-radius: 25px;
+    text-decoration: none; /* Remove underline from links */
     transition: color 0.3s, background-color 0.3s;
 }
+
 .navbar-custom .nav-link:hover {
-    color: rgb(0, 0, 0);
-    background-color: #ff0000;
+    color: #000000; /* Change text color on hover */
+    background-color: #ff0000; /* Change background color on hover */
 }
+
 
 /* Hero Section Styles */
 .hero-section {
@@ -61,20 +72,23 @@ body, html {
     animation: fadeIn 2s ease-in-out forwards;
     text-align: left;
 }
+
 .hero-tagline {
-    font-size: 4.5rem;
+    font-size: 3rem;
     margin-top: 1rem;
     margin-left: 9rem;
     animation: fadeInDelay 4s ease-in-out forwards;
     text-align: left;
+    font-weight: 100; /* Make the text less bold */
+    font-style: italic; /* Make the text italic */
 }
+
 .hero-image {
     width: 900px;
     height: 900px;
     background: url(image/Threads.png) no-repeat center center;
     background-size: cover;
     animation: fadeInDelay 6s ease-in-out forwards, floatUpAndDown 3s ease-in-out infinite;
-    transform: skew(30deg, 10deg);
 }
 
 /* Animation Styles */
@@ -109,6 +123,13 @@ body, html {
 .about-section {
     padding: 4rem 0;
 }
+
+.about-section h2 {
+    font-weight: 700; /* Makes the text bold */
+    font-size: 2rem; /* Optional: Adjust the size as needed */
+    margin-bottom: 1rem; /* Optional: Add spacing below the heading */
+}
+
 .about-section img {
     border-radius: 8px;
 }
@@ -143,17 +164,17 @@ body, html {
     border-radius: 4px;
 }
 .btn-primary {
-    background-color: #007bff;
+    background-color: #ff0000;
     border: none;
     transition: background-color 0.3s;
 }
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #ff0000;
 }
 
 /* Footer Styles */
 .footer-section {
-    background-color: #343a40;
+    background-color: #000000;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
